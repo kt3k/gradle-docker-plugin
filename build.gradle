@@ -16,6 +16,8 @@ apply plugin: 'idea'
 apply plugin: 'cobertura'
 apply plugin: 'coveralls'
 
+apply plugin: 'versions'
+
 idea {
   module {
     testSourceDirs += file('src/integrationTest/groovy')
@@ -105,6 +107,6 @@ check.dependsOn aggregateTestReports
 cobertura.coverageFormats = ['html', 'xml']
 
 task wrapper(type: Wrapper) {
-  gradleVersion = '1.12'
-  distributionUrl = 'http://services.gradle.org/distributions/gradle-1.12-all.zip'
+  gradleVersion = '2.0-rc-1'
+  distributionUrl = 'http://services.gradle.org/distributions/gradle-2.0-rc-1-all.zip'
 }
